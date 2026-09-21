@@ -1,0 +1,36 @@
+{
+  "name": "HealthTrackerEvent",
+  "type": "object",
+  "properties": {
+    "pet_id": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "vacina",
+        "vermifugo",
+        "antipulgas",
+        "sintoma",
+        "ocorrencia_fezes",
+        "consulta"
+      ]
+    },
+    "data_registro": {
+      "type": "string",
+      "format": "date"
+    },
+    "data_proxima_dose": {
+      "type": "string",
+      "format": "date"
+    },
+    "observacoes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "pet_id",
+    "tipo",
+    "data_registro"
+  ]
+}

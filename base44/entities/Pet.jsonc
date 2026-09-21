@@ -1,0 +1,104 @@
+{
+  "name": "Pet",
+  "type": "object",
+  "properties": {
+    "tutor_id": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "especie": {
+      "type": "string",
+      "enum": [
+        "cachorro",
+        "gato",
+        "outro"
+      ],
+      "default": "cachorro"
+    },
+    "raca": {
+      "type": "string"
+    },
+    "porte": {
+      "type": "string",
+      "enum": [
+        "pequeno",
+        "medio",
+        "grande"
+      ],
+      "default": "medio"
+    },
+    "idade": {
+      "type": "number"
+    },
+    "sexo": {
+      "type": "string",
+      "enum": [
+        "macho",
+        "femea"
+      ],
+      "default": "macho"
+    },
+    "castrado": {
+      "type": "boolean",
+      "default": false
+    },
+    "sociabilidade_animais": {
+      "type": "boolean",
+      "default": true
+    },
+    "sociabilidade_criancas": {
+      "type": "boolean",
+      "default": true
+    },
+    "nivel_energia": {
+      "type": "string",
+      "enum": [
+        "baixo",
+        "medio",
+        "alto"
+      ],
+      "default": "medio"
+    },
+    "info_saude_basica": {
+      "type": "string"
+    },
+    "rotina_alimentar": {
+      "type": "string"
+    },
+    "horarios_passeio": {
+      "type": "string"
+    },
+    "habitos_sono": {
+      "type": "string"
+    },
+    "vet_emergencia": {
+      "type": "string"
+    },
+    "contato_emergencia": {
+      "type": "string"
+    },
+    "alergias_medicamentos": {
+      "type": "string"
+    },
+    "carteira_vacinacao_url": {
+      "type": "string"
+    },
+    "resumo_ia": {
+      "type": "string"
+    },
+    "foto": {
+      "type": "string"
+    },
+    "passaporte_completo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "nome",
+    "porte",
+    "sexo"
+  ]
+}

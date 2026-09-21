@@ -1,0 +1,76 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "tutor_id": {
+      "type": "string"
+    },
+    "host_id": {
+      "type": "string"
+    },
+    "pet_id": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "Hospedagem",
+        "Pre_Encontro",
+        "Creche Adaptacao",
+        "Hospedagem Teste"
+      ],
+      "default": "Hospedagem"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "solicitada",
+        "em_adaptacao",
+        "confirmada",
+        "em_andamento",
+        "concluida",
+        "cancelada"
+      ],
+      "default": "solicitada"
+    },
+    "data_inicio": {
+      "type": "string",
+      "format": "date"
+    },
+    "data_fim": {
+      "type": "string",
+      "format": "date"
+    },
+    "valor_total": {
+      "type": "number",
+      "default": 0
+    },
+    "valor_adaptacao": {
+      "type": "number",
+      "default": 0
+    },
+    "desconto_aplicado": {
+      "type": "number",
+      "default": 0
+    },
+    "avaliacao_adaptacao": {
+      "type": "object"
+    },
+    "notas": {
+      "type": "string"
+    },
+    "resposta_host": {
+      "type": "string",
+      "enum": [
+        "aceitar",
+        "pre_encontro",
+        "creche_adaptacao",
+        "hospedagem_teste"
+      ]
+    }
+  },
+  "required": [
+    "tipo",
+    "data_inicio"
+  ]
+}

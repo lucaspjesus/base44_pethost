@@ -1,0 +1,34 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "tutor",
+        "anfitriao",
+        "admin"
+      ],
+      "default": "tutor"
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "foto": {
+      "type": "string"
+    },
+    "verificado": {
+      "type": "boolean",
+      "default": false
+    },
+    "dados_bancarios": {
+      "type": "string"
+    },
+    "documento_url": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    }
+  }
+}

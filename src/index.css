@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 40% 98%;
+    --foreground: 160 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 12%;
+    --primary: 162 52% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 60% 92%;
+    --secondary-foreground: 30 35% 25%;
+    --muted: 40 30% 95%;
+    --muted-foreground: 160 10% 42%;
+    --accent: 25 55% 88%;
+    --accent-foreground: 30 40% 22%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 162 52% 42%;
+    --chart-1: 162 52% 42%;
+    --chart-2: 25 70% 60%;
+    --chart-3: 200 60% 55%;
+    --chart-4: 45 80% 60%;
+    --chart-5: 330 60% 65%;
+    --radius: 1rem;
+    --font-heading: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 42 40% 98%;
+    --sidebar-foreground: 160 30% 20%;
+    --sidebar-primary: 162 52% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 55% 88%;
+    --sidebar-accent-foreground: 30 40% 22%;
+    --sidebar-border: 40 25% 88%;
+    --sidebar-ring: 162 52% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(12px);
+  }
+}

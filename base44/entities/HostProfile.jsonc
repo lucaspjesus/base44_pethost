@@ -1,0 +1,93 @@
+{
+  "name": "HostProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "fotos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tipos_servico": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Hospedagem",
+          "Creche",
+          "Passeio"
+        ]
+      }
+    },
+    "regras_aceite": {
+      "type": "object",
+      "properties": {
+        "aceite_imediato": {
+          "type": "boolean",
+          "default": true
+        },
+        "exige_pre_encontro": {
+          "type": "boolean",
+          "default": false
+        },
+        "exige_creche_adaptacao": {
+          "type": "boolean",
+          "default": false
+        },
+        "exige_hospedagem_teste": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "precos_servicos": {
+      "type": "object",
+      "properties": {
+        "hospedagem": {
+          "type": "number"
+        },
+        "creche": {
+          "type": "number"
+        },
+        "passeio": {
+          "type": "number"
+        },
+        "adaptacao": {
+          "type": "number"
+        }
+      }
+    },
+    "status_aprovacao": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "aprovado",
+        "reprovado"
+      ],
+      "default": "pendente"
+    },
+    "super_host": {
+      "type": "boolean",
+      "default": false
+    },
+    "cidade": {
+      "type": "string"
+    },
+    "capacidade": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "required": [
+    "nome"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "StayTimelineEvent",
+  "type": "object",
+  "properties": {
+    "booking_id": {
+      "type": "string"
+    },
+    "autor_id": {
+      "type": "string"
+    },
+    "autor_nome": {
+      "type": "string"
+    },
+    "tipo_evento": {
+      "type": "string",
+      "enum": [
+        "alimentacao",
+        "passeio",
+        "medicacao",
+        "agua",
+        "descanso",
+        "foto",
+        "nota",
+        "resumo_ia"
+      ]
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "foto_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "booking_id",
+    "tipo_evento"
+  ]
+}
